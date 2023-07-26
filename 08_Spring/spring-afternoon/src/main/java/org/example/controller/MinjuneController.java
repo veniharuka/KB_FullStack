@@ -10,6 +10,6 @@ public class MinjuneController {
     @GetMapping("/minjune/v1/show")
     public String Mpage() {
         log.info("================> MinjuneController /");
-        return "minjune"; //web-inf 폴더에 minjune이라는 파일 찾음
+        return "/minjune"; //web-inf 폴더에 minjune이라는 파일 찾음
     }
 }
