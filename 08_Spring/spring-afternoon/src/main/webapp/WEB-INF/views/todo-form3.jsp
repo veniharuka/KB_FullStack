@@ -6,7 +6,7 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
-<h1>할 일 추가 2 </h1>
+<h1>할 일 추가 3 </h1>
 <form method="get" action="/todo/v3/form/save">
         <label for="todo">할 일 : </label>
     <input type="text" id="todo" name="todo" required>
