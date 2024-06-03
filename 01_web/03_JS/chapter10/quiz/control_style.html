@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let space = '';
+
+        for (i = 0; i < 256; i++) {
+          space += '<div></div>';
+        }
+
+        document.body.innerHTML = space;
+
+        let spaces = document.querySelectorAll('div');
+
+        for (let i = 0; i < spaces.length; i++) {
+          let div = spaces[i];
+
+          div.style.height = '2px';
+          div.style.background = 'rgb(' + i + ',' + i + ',' + i + ')';
+        }
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

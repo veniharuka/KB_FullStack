@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let output = '';
+      for (let i = 0; i < 5; i++) {
+        for (let k = 4; i < k; k--) {
+          output += ' ';
+        } //예제1과 다른점이다. 띄어쓰기가 포함되어야 하므로 이를 위한 for 반복문이 추가되었다.
+        for (let j = 0; j < 2 * i + 1; j++) {
+          output += '*';
+        }
+        output += '\n';
+      }
+
+      console.log(output);
+
+      /* i가 0,1,2,3,4 일때 해당 for문이 작동합니다.
+      i가 0일 때 j가 1번 작동하고 줄이 바뀌면서 하나의 루프가 넘어갑니다.
+      i가 1일 때 0<1+1 / 1<1+1 (j++로 인해 j값이 증가함) 2번 작동
+      위와 같이 i가 4일때까지 작동합니다. */
+    </script>
+  </head>
+  <body></body>
+</html>

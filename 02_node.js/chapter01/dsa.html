@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const checkBtn = document.createAttribute('input');
+      checkBtn.setAttribute('type', 'checkbox');
+
+      checkBtn.addEventListener('click', function () {
+        if (checkBtn.checked === true) {
+          checkBtn.parentNode.style.textDecoration = 'line-through';
+        } else {
+          checkBtn.parentNode.style.textDecoration = 'none';
+        }
+      });
+    </script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        background-color: orange;
+      }
+      #header {
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: center;
+      }
+      div > input {
+        margin: 40px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"><h1 id="header">Tetz Todo List</h1></div>
+    <form>
+      <div>
+        <input id="doList" type="text" />
+        <input id="addList" type="button" value="할 일 추가" />
+      </div>
+    </form>
+  </body>
+</html>

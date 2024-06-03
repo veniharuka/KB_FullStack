@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="http://13.209.88.75:4000" method="get">
+      <img
+        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
+        alt="강아지"
+        height="300"
+        onclick="selectDog()"
+      /><input id="dog" type="radio" name="favorite" value="dog" /><label
+        for="dog"
+        >강아지</label
+      >
+      <img
+        src="https://i.namu.wiki/i/d1A_wD4kuLHmOOFqJdVlOXVt1TWA9NfNt_HA0CS0Y_N0zayUAX8olMuv7odG2FiDLDQZIRBqbPQwBSArXfEJlQ.webp"
+        alt="고양이"
+        height="300"
+        onclick="selectCat()"
+      /><input id="cat" type="radio" name="favorite" value="cat" /><label
+        for="cat"
+        >고양이</label
+      >
+      <br />
+      <input type="submit" value="제출" />
+    </form>
+
+    <script>
+      function selectDog() {
+        document.getElementById('dog').checked = true;
+      }
+
+      function selectCat() {
+        document.getElementById('cat').checked = true;
+      }
+    </script>
+  </body>
+</html>

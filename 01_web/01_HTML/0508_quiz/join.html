@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>회원가입</legend>
+            <label for="userid">사용자ID</label>
+            <input type="text" name="userid" id="userid" />
+            <br />
+            <label for="password">비밀번호</label>
+            <input type="text" name="password" id="password" />
+            <br />
+            <label for="pscheck">비밀번호 확인</label>
+            <input type="text" name="pscheck" id="pscheck" />
+            <br />
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" />
+            <br />
+            <label for="gender">성별</label>
+            <input type="radio" name="gender" value="men" /> 남 <input type="radio" name="gender" value="women" />여 <br />
+            취미<input type="checkbox" name="sports" />축구<input type="checkbox" name="sports" />야구 <input type="checkbox" name="sports" />배구
+            <input type="checkbox" name="sports" />농구 <br />
+            email<input type="text" name="email" value="" /> <br />
+            역할
+            <select name="role">
+                <option value="admin">ADMIN</option>
+                <option value="manager">관리자</option>
+                <option value="member">일반회원</option>
+            </select>
+          </div>
+        </table>
+        <input type="button" name="확인" value="확인" />
+        <input type="button" name="다시쓰기" value="다시쓰기" />
+      </fieldset>
+    </form>
+  </body>
+</html>

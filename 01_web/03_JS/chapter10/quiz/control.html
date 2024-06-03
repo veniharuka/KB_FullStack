@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let sentence = '';
+
+        for (i = 0; i < 10; i++) {
+          sentence += `<h1>Header - ${i} - <h1>`;
+        }
+
+        document.body.textContent = sentence;
+        //document.body.innerHTML = sentence;
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
