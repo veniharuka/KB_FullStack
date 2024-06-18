@@ -142,15 +142,9 @@ button:focus {
   background-color: #a7dad0;
   position: relative;
 }
-.summary div:not(:last-child)::after {
-  content: '';
-  width: 1px;
-  height: 30px; /* 구분선 높이 */
-  background-color: #ccc; /* 구분선 색상 */
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.income {
+  font-weight: bold;
+  border-right: 10px;
 }
 .totalBalance {
   font-weight: bold;
@@ -160,11 +154,13 @@ button:focus {
   padding: 10px; /* 원하는 여백 설정 */
   background-color: #a7dad0;
 }
-
+button.expenses {
+  border-right: 11px solid black;
+}
 .summary button:focus {
   outline: none;
 }
-.income,
+
 .expenses {
   font-weight: bold;
 }

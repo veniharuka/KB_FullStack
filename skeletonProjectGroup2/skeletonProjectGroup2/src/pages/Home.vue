@@ -1,27 +1,25 @@
 <template>
   <div class="container">
-    <div
-      class="btn-group btn-group-lg rounded-pill"
-      style="background-color: #96e8cd"
-    >
-      <button
+    <div class="btn-group btn-group-sm rounded-pill">
+      <button>dsd</button
+      ><button
         type="button"
         class="btn btn-primary rounded-pill"
-        style="width: 100px; position: relative; left: 0"
+        style="width: 90px; position: relative; left: 0"
       >
         일일
       </button>
       <button
         type="button"
         class="btn btn-primary rounded-pill"
-        style="width: 100px; position: absolute; left: 50px"
+        style="width: 100px; position: absolute; left: 80px"
       >
         월별
       </button>
       <button
         type="button"
         class="btn btn-primary rounded-pill"
-        style="width: 100px; position: relative; left: 100px"
+        style="width: 100px; position: relative; left: 90px"
       >
         요약
       </button>
@@ -43,7 +41,7 @@
     <div class="summary">
       <div>
         <button>
-          수입<span class="income">{{ income }}</span>
+          <span class="income">{{ income }} 수입</span>
         </button>
       </div>
       <div>
