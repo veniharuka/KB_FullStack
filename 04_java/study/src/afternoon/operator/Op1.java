@@ -1,4 +1,7 @@
-package afternoon.variable.operator;
+package afternoon.operator;
 
-public class p1 {
+public class Op1 {
+    public static void main(String[] args) {
+
+    }
 }
