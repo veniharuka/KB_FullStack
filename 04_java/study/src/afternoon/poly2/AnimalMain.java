@@ -15,7 +15,7 @@ public class AnimalMain {
         soundAnimal(chicken);
     }
 
-    private static void soundAnimal(Animal animal){
+   public static void soundAnimal(Animal animal){
         animal.sound();
     }
 }
