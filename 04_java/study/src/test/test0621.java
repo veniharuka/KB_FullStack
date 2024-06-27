@@ -1,21 +1,24 @@
 package test;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 public class test0621 {
-    int filed;
-    void method(){}
-
-
-
-    static test0621 tst = new test0621();
-    static void method3(){
-
-        tst.filed=10;
-
-    }
-
-
     public static void main(String[] args) {
-        test0621 test = new test0621();
-//        System.out.println(tst.method3());
+//        try {
+//            (BufferedReader br = BufferedReader(new InputStreamReader(System.in))){
+//                System.out.println("Enter left: ");
+//                int left = Integer.parseInt(br.readLine());
+//
+//                System.out.println("Enter right: ");
+//                int right = Integer.parseInt((br.readLine));
+//
+//                Solution sol = new Solution();
+//                int result = sol.solution(left,right);
+//                System.out.println();
+//            }
+//        }
+
     }
 }
