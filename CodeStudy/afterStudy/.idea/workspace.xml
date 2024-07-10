@@ -8,21 +8,33 @@
       <change afterPath="$PROJECT_DIR$/CodeStudy/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/CodeStudy.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/Arrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/BFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/Blackjack.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/DfsVirus.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/DfsVirusProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/Maze2178.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/PhoneNumberList.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/Que.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/QueCake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/Sequnce0628.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/backjon2747.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/backjoon10828.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/nexttoken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../04_java/study/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_java/study/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../04_java/study/study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_java/study/study.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/afterStudy.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Study/test" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/sieveOfEratosthenes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/study0705/ArrayDequeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/study0705/BracketString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/study0705/CorrectBracket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/study0705/DailyTemperature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/study0705/NonDropStock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/study0705/SameQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStudy/src/afterStudy/study0705/StackExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,23 +58,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DfsVirus (1).executor": "Run",
-    "Application.DfsVirus.executor": "Run",
-    "Application.DfsVirusProto.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/KB_FullStack/CodeStudy/afterStudy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DfsVirus (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DfsVirus.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DfsVirusProto.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/KB_FullStack/CodeStudy/afterStudy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="afterStudy" />
@@ -131,6 +143,7 @@
       <workItem from="1719479441354" duration="8000" />
       <workItem from="1719479796089" duration="834000" />
       <workItem from="1719481312067" duration="3564000" />
+      <workItem from="1720405666223" duration="2279000" />
     </task>
     <servers />
   </component>
