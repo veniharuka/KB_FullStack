@@ -57,14 +57,6 @@ public class ManageUser {
     }
 
 
-
-
-
-
-
-
-
-
     public void deleteUserById(int id){
         Connection conn = JDBCUtil.getConnection();
         String sql = "DELETE FROM user_table WHERE id = ?";
