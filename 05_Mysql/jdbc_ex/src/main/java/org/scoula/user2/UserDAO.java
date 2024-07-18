@@ -39,7 +39,8 @@ public class UserDAO {
              ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
-                UserVO user =new UserVO(    rs.getInt("id"),
+                UserVO user =new UserVO(
+                        rs.getInt("id"),
                         rs.getString("userid"),
                         rs.getString("name"),
                         rs.getString("password"),
