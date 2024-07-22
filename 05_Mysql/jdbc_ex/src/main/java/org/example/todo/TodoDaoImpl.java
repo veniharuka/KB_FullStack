@@ -94,22 +94,84 @@ public class TodoDaoImpl implements TodoDao {
 
     @Override
     public void getUncompletedTodosUserId(String user_id) {
+        String sql ="SELECT * FROM todo WHERE user_id=? and is_completed=?";
 
+        try(PreparedStatement ps = conn.prepareStatement(sql)){
+            ps.setString(1, user_id);
+            ArrayList<Todovo> todos = new ArrayList<>();
+            try(ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String userId = rs.getString("user_id");
+                    String todo= rs.getString("todo");
+                    boolean is_completed = rs.getBoolean("is_completed");
+                    Timestamp created_at = rs.getTimestamp("created_at");
+
+                    Todovo todoData = new Todovo(id,userId,todo,is_completed,created_at);
+                    todos.add(todoData);
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void makeTodoCompleted(int id, String user_id) {
+        String sql = "UPDATE todo SET id=? WHERE user_id=?";
 
+        try(PreparedStatement ps = conn.prepareStatement(sql)){
+            ps.setInt(1, id);
+            ps.setString(2, user_id);
+
+            int affectedRows = ps.executeUpdate();
+
+            if (affectedRows > 0) {
+                System.out.println("## ID 가 " + id + " 인 Todo 가 완료 처리 되었습니다 ##");
+            } else {
+                System.out.println("## ID 가 " + id + " 인 Todo 는 회원님의 Todo 가 아닙니다 ##");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void createTodo(String todo, String user_id) {
+        String sql = "INSERT INTO todo (user_id,todo) VALUES (?,?)";
 
+        try(PreparedStatement ps = conn.prepareStatement(sql)){
+            ps.setString(1, user_id);
+            ps.setString(2, todo);
+            int affectedRows = ps.executeUpdate();
+
+            if (affectedRows > 0) {
+                System.out.println("## Todo 생성 성공! ##");
+            } else {
+                System.out.println("## Todo 생성 실패! ##");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void deleteTodo(int id, String user_id) {
+        String sql = "DELETE FROM todo WHERE user_id=?";
 
+        try(PreparedStatement ps = conn.prepareStatement(sql)){
+            ps.setInt(1, id);
+
+            int affectedRows = ps.executeUpdate();
+            if (affectedRows > 0){
+                System.out.println("정상적으로 삭제되었습니다.");
+            }else{
+                System.out.println("id를 제대로 입력해주세요.");
+            }
+            ps.executeQuery();
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
