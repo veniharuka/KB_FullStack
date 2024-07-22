@@ -40,6 +40,7 @@
     "Application.QueCake.executor": "Run",
     "Application.SameQueue.executor": "Run",
     "Application.StackExample.executor": "Run",
+    "Application.TargetNumber.executor": "Run",
     "Application.afterStudy.study0719.BFS.executor": "Run",
     "Application.backjon2747.executor": "Run",
     "Application.backjoon10828.executor": "Run",
@@ -61,7 +62,7 @@
       <recent name="afterStudy.study0719" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.afterStudy.study0719.BFS">
+  <component name="RunManager" selected="Application.TargetNumber">
     <configuration name="BracketString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="afterStudy.study0705.BracketString" />
       <module name="CodeStudy" />
@@ -101,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="afterStudy.study0705.StackExample" />
+    <configuration name="TargetNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="afterStudy.study0719.TargetNumber" />
       <module name="CodeStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="afterStudy.study0705.*" />
+          <option name="PATTERN" value="afterStudy.study0719.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TargetNumber" />
         <item itemvalue="Application.afterStudy.study0719.BFS" />
         <item itemvalue="Application.BracketString" />
         <item itemvalue="Application.SameQueue" />
         <item itemvalue="Application.CorrectBracket" />
-        <item itemvalue="Application.StackExample" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +165,7 @@
       <workItem from="1720084171521" duration="4433000" />
       <workItem from="1720135955203" duration="1567000" />
       <workItem from="1720140455366" duration="13789000" />
-      <workItem from="1721353389179" duration="6361000" />
+      <workItem from="1721353389179" duration="9160000" />
     </task>
     <servers />
   </component>
