@@ -1,4 +1,4 @@
-use user_ex;
+ause user_ex;
 
 CREATE TABLE users{
 
