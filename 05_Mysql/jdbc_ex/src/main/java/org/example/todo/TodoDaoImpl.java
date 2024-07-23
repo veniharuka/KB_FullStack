@@ -176,6 +176,29 @@ public class TodoDaoImpl implements TodoDao {
 
     @Override
     public void getAllTodosWithUserName() {
+        String sql = "SELECT t.id,t.user_id,t.todo,t.is_completed,t.created_at"+
+          "FROM todo t"+
+                "JOIN todo_user u ON t.user_id = u.user_id"+
+                "ORDER BY t.id ASC";
+        List<Todovo> todos = new ArrayList<>();
+        try(Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery(sql)){
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String user_id = rs.getString("user_id");
+                String todo = rs.getString("todo");
+                boolean is_completed = rs.getBoolean("is_completed");
+                String created_at = rs.getString("created_at");
+                String userName = rs.getString("user_name");
+
+                System.out.printf("id :%d, user_id :%s, 작성자 이름 : %s,todo:%s, is_completed:%b, created_at : %s%n ",
+                        id, user_id, todo, is_completed, created_at);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
 
     }
 }
