@@ -29,34 +29,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BFS.executor": "Run",
-    "Application.BracketString.executor": "Run",
-    "Application.CorrectBracket.executor": "Run",
-    "Application.PhoneNumberList.executor": "Run",
-    "Application.Que.executor": "Run",
-    "Application.QueCake (1).executor": "Run",
-    "Application.QueCake.executor": "Run",
-    "Application.SameQueue.executor": "Run",
-    "Application.StackExample.executor": "Run",
-    "Application.TargetNumber.executor": "Run",
-    "Application.afterStudy.study0719.BFS.executor": "Run",
-    "Application.backjon2747.executor": "Run",
-    "Application.backjoon10828.executor": "Run",
-    "Application.nexttoken.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/KB_FullStack/CodeStudy/afterStudy/CodeStudy/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BFS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BracketString.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CorrectBracket.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhoneNumberList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Que.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QueCake (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.QueCake.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SameQueue.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StackExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TargetNumber.executor&quot;: &quot;Run&quot;,
+    &quot;Application.afterStudy.study0719.BFS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.backjon2747.executor&quot;: &quot;Run&quot;,
+    &quot;Application.backjoon10828.executor&quot;: &quot;Run&quot;,
+    &quot;Application.nexttoken.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/KB_FullStack/CodeStudy/afterStudy/CodeStudy/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="afterStudy.study0719" />
@@ -166,6 +166,7 @@
       <workItem from="1720135955203" duration="1567000" />
       <workItem from="1720140455366" duration="13789000" />
       <workItem from="1721353389179" duration="9160000" />
+      <workItem from="1721861765845" duration="2680000" />
     </task>
     <servers />
   </component>
