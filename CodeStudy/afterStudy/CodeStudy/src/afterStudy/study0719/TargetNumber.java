@@ -15,7 +15,7 @@ public class TargetNumber {
         //basecase
         if(idx == numbers.length) {
             if(target == cur) {
-                answer++;
+
             }
         }
 
