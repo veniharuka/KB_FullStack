@@ -1,8 +1,4 @@
-package afterStudy;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+package afterStudy.study0702;
 
 public class Sequnce0628 {
     public static int[] main(int[] sequence, int k) {
