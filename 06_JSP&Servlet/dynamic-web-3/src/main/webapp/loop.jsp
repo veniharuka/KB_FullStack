@@ -9,16 +9,15 @@
 <html>
 <head>
     <title>반복문</title>
-    <ul>
-        <% int max=10; %>
-
-        <p> 총 <%= max %>번 출력</p>
-        <% for(int i=1; i<max; i++){%>
-        <li><%= i %>번째 반복 중</li>
-        <%} %>
-    </ul>
 </head>
 <body>
+<ul>
+    <%! int max=10; %>
 
+    <p> 총 <%= max %>번 출력</p>
+    <% for(int i=1; i<=max; i++){ %>
+    <li><%= i %>번째 반복 중</li>
+    <% } %>
+</ul>
 </body>
 </html>
