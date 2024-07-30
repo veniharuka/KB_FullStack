@@ -9,6 +9,7 @@ public class MazeBfs {
     static int[] dc = {1, 1, 0, -1, -1, -1, 0, 1};
     static int rowLength;
     static int colLength;
+
     public static void main(String[] args) {
         grid = new int[][]{
                 {1, 1, 1, 1, 0},
@@ -25,24 +26,25 @@ public class MazeBfs {
     }
 
     public static boolean isValid(int r, int c) {
-        return (r >= 0 && r < rowLength) && (c >= 0 && c < colLength) && (grid[r][c] == 1);
+       return (r>=0 && r<rowLength) && (c>=0 && c< colLength) && (grid[r][c] == 1);
     }
     public static void bfs(int r, int c) {
-        Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[]{r, c});
+        Deque<int[]> que = new LinkedList<>();
+        que.add(new int[]{r, c});
         visited[r][c] = true;
-        while (!queue.isEmpty()) {
-            int[] cur = queue.poll();
-            for (int i = 0; i < 8; i++) {
-                int nr = cur[0] + dr[i];
-                int nc = cur[1] + dc[i];
-                if(isValid(nr, nc)) {
-                    if(!visited[nr][nc]) {
-                        queue.add(new int[]{nr, nc});
-                        visited[nr][nc] = true;
-                    }
-                }
+        while (!que.isEmpty()) {
+            int[] cur = que.poll();
+            int curRow = cur[0];
+            int curCol = cur[1];
 
+            for(int i = 0; i < dr.length; i++) {
+                int newRow = curRow + dr[i];
+                int newCol = curCol + dc[i];
+                if(isValid(newRow, newCol)) {
+                    visited[newRow][newCol] = true;
+                    que.add(new int[]{newRow, newCol});
+
+                }
             }
         }
     }
