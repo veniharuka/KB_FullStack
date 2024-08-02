@@ -29,42 +29,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BFS.executor": "Run",
-    "Application.BracketString.executor": "Run",
-    "Application.CorrectBracket.executor": "Run",
-    "Application.MazeBfs.executor": "Run",
-    "Application.PhoneNumberList.executor": "Run",
-    "Application.Que.executor": "Run",
-    "Application.QueCake (1).executor": "Run",
-    "Application.QueCake.executor": "Run",
-    "Application.SameQueue.executor": "Run",
-    "Application.StackExample.executor": "Run",
-    "Application.TargetNumber.executor": "Run",
-    "Application.afterStudy.study0719.BFS.executor": "Run",
-    "Application.backjon2747.executor": "Run",
-    "Application.backjoon10828.executor": "Run",
-    "Application.nexttoken.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/KB_FullStack/CodeStudy/afterStudy/CodeStudy/src/Main.java",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BFS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BracketString.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CorrectBracket.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MazeBfs.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhoneNumberList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Que.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QueCake (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.QueCake.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SameQueue.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StackExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TargetNumber.executor&quot;: &quot;Run&quot;,
+    &quot;Application.afterStudy.study0719.BFS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.backjon2747.executor&quot;: &quot;Run&quot;,
+    &quot;Application.backjoon10828.executor&quot;: &quot;Run&quot;,
+    &quot;Application.nexttoken.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/KB_FullStack/CodeStudy/afterStudy/CodeStudy/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="afterStudy.study0719" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MazeBfs">
+  <component name="RunManager" selected="Application.StockPrice">
     <configuration name="BracketString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="afterStudy.study0705.BracketString" />
       <module name="CodeStudy" />
@@ -91,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SameQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="afterStudy.study0705.SameQueue" />
+    <configuration name="StockPrice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="afterStudy.test0809.StockPrice" />
       <module name="CodeStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="afterStudy.study0705.*" />
+          <option name="PATTERN" value="afterStudy.test0809.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StockPrice" />
         <item itemvalue="Application.MazeBfs" />
         <item itemvalue="Application.TargetNumber" />
         <item itemvalue="Application.afterStudy.study0719.BFS" />
         <item itemvalue="Application.BracketString" />
-        <item itemvalue="Application.SameQueue" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +170,12 @@
       <workItem from="1721353389179" duration="9160000" />
       <workItem from="1721861765845" duration="2680000" />
       <workItem from="1722154934210" duration="4346000" />
+      <workItem from="1722340289574" duration="3000" />
+      <workItem from="1722437338148" duration="2000" />
+      <workItem from="1722523551789" duration="6000" />
+      <workItem from="1722524815962" duration="2000" />
+      <workItem from="1722615389390" duration="9000" />
+      <workItem from="1722615416571" duration="327000" />
     </task>
     <servers />
   </component>
