@@ -1,16 +1,15 @@
 
-package org.example.controller.todo;
+package org.example.controller.todo.v2;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.dto.todo.TodoDtoListV1;
 import org.example.dto.todo.TodoDtoListV2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @Slf4j
@@ -23,12 +22,12 @@ public class TodoSaveControllerV2 {
     }
     @RequestMapping(value = "/todo/v2/form/save", method = RequestMethod.GET)
 
-    public String todoSave(HttpServletRequest request, HttpServletResponse response){
+    public String todoSave(HttpServletRequest request, Model model){
         log.info("===========> 할 일 추가 Request 호출, /todo/form/save");
         String todo = request.getParameter("todo");
 
         todoList.addList(todo);
-        request.setAttribute("todoList", todoList.getList());
+        model.addAttribute("todoList", todoList.getList());
 
         return "todo-show2";
     }
