@@ -6,14 +6,14 @@
     <title>Member Register</title>
 </head>
 <body>
-<%@ include file="header.jsp"%>
-<h1>회원 추가 1</h1>
-<form method="get" action="/member/form/save">
+<%@ include file="../header.jsp"%>
+<h1>회원 추가 V2</h1>
+<form method="post" action="/member/v3/form/save">
     <label for="id">아이디 :</label>
     <input type="text" id="id" name="id" required>
     <br>
     <label for="name">이름 :</label>
-    <input type="password" id="name" name="name" required>
+    <input type="text" id="name" name="name" required>
     <br>
     <button type="submit">회원 추가</button>
 </form>

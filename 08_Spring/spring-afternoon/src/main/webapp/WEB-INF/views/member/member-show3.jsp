@@ -3,10 +3,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>회원 목록</title>
+    <title>회원 목록 V3</title>
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="../header.jsp"%>
 <h1>회원 목록 V2</h1>
 <ul>
     <li><b> ID - Name </b></li>
