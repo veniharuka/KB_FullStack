@@ -4,4 +4,7 @@
     <a href="/">HOME</a>
     <a href="/post/v1/show">게시글 목록</a>
     <a href="/minjune/v1/show">민준 v1 show</a>
+    <a href="/post/v1/404">404</a>
+    <a href="/post/v1/error">error</a>
+
 </header>

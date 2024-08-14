@@ -28,7 +28,7 @@ class RootConfigTest {
     void sqlSessionFactory() {
         try(SqlSession session = sqlSessionFactory.openSession();
             Connection conn = session.getConnection()){
-            log.info("SQLSession",session);
+                log.info("SQLSession",session);
             log.info("Connection",conn);
         }catch(Exception e){
             fail(e.getMessage());

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: student
-  Date: 2024-08-05
-  Time: 오후 3:11
+  Date: 2024-08-14
+  Time: 오전 10:45
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,8 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <%@include file="header2.jsp"%>
-    <h1>Hello, Spring World!</h1>
-    <h1>${name} 환영합니다.</h1>
+<h2>SAMPLE DTO ${sampleDTO}</h2>
+<h2>PAGE ${page}</h2>
 </body>
 </html>
