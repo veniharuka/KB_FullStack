@@ -2,7 +2,7 @@ package afterStudy.test0809;
 import java.util.*;
 public class StockPrice {
     public static void main(String[] args) {
-        int[] prices = {1, 2, 3, 2, 3};  // 여기서 테스트 배열을 정의합니다.
+        int[] prices = {8,4,2,1,4,6};  // 여기서 테스트 배열을 정의합니다.
         Solution s = new Solution();
         int[] result = s.solution(prices);
 
