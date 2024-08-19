@@ -98,8 +98,8 @@ public class RestPostControllerV2 {
     }
 
     // 삭제 기능 컨트롤러
-    @DeleteMapping(value = "/delete", produces = "text/plain;charset=UTF-8")
-    public ResponseEntity<String>  postDelete(@RequestParam("id") Long id, HttpServletRequest request) {
+    @DeleteMapping(value = "/delete/{id}", produces = "text/plain;charset=UTF-8")
+    public ResponseEntity<String>  postDelete(@PathVariable("id") Long id, HttpServletRequest request) {
         log.info("================> 게시글 삭제 기능 호출, " + request.getRequestURI());
 
 
