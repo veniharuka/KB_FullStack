@@ -99,11 +99,11 @@ public class RestPostControllerV2 {
 
     // 삭제 기능 컨트롤러
     @DeleteMapping(value = "/delete", produces = "text/plain;charset=UTF-8")
-    public ResponseEntity<String>  postDelete(@RequestParam("id") String id, HttpServletRequest request) {
+    public ResponseEntity<String>  postDelete(@RequestParam("id") Long id, HttpServletRequest request) {
         log.info("================> 게시글 삭제 기능 호출, " + request.getRequestURI());
 
-        long postId = Long.parseLong(id);
-        int affectedRows = postRepository.delete(postId);
+
+        int affectedRows = postRepository.delete(id);
 
         if (affectedRows > 0) {
             return ResponseEntity.ok("삭제 성공");
