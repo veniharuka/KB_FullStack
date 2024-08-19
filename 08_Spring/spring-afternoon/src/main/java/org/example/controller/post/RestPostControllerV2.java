@@ -4,67 +4,53 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.dto.post.PostDto;
 import org.example.dto.post.PostRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-@Controller
+@RestController
 @Slf4j
 @RequiredArgsConstructor
-@RequestMapping("/post/v1")
-public class PostController {
+@CrossOrigin(origins = "*")
+@RequestMapping("/post/v2/rest")
+public class RestPostControllerV2 {
     private final PostRepository postRepository;
     private String context = "/post";
 
-
-    // @RequiredArgsConstructor 주석 처리하면 아래 코드 주석 풀기
-//    @Autowired
-//    public PostController(PostRepository postRepository) {
-//        this.postRepository = postRepository;
-//    }
-
     // 게시글 목록 보기
     @GetMapping("/show")
-    public String postList(HttpServletRequest request, Model model) {
-        log.info("=========> 게시글 목록 페이지 호출, " + request.getRequestURI());
+    public ResponseEntity<List<PostDto>> postList(HttpServletRequest request) {
+        log.info("===========> 게시글 목록 페이지 호출," + request.getRequestURI());
 
         List<PostDto> list = postRepository.findAll();
-        model.addAttribute("postList", list);
+        // ok는 200번 의미
+        return ResponseEntity.ok(list);
 
-        // /post/post-show.jsp
-        return context + "/post-show";
+    }
+    //body 다음엔 body에 넣고 싶은 값 입력
+    @GetMapping(value= "/test", produces = "text/plain;charset=UTF-8")
+    public ResponseEntity<String> test(){
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("요청을 처리할 수 없습니다.");
     }
 
-
-    // 게시물 조건 조회
+    //게시물 조건 조회
     @GetMapping("/search")
-    public String postSearch(
+    public List<PostDto> postSearch(
             @RequestParam("title") String title,
             @RequestParam("content") String content,
             HttpServletRequest request,
             Model model
-    ) {
-        log.info("============> 게시글 검색 기능 호출, " + request.getRequestURI());
+    ){
+        log.info("=========> 게시글 검색 기능 호출, " + request.getRequestURI());
 
-        List<PostDto> searchedList = postRepository.findByCondition(title, content);
-        model.addAttribute("postList", searchedList);
-        return context + "/post-show";
+        List<PostDto> searchedList = postRepository.findByCondition(title,content);
+
+        return searchedList;
     }
-
-    // 게시글 추가 페이지 요청
-    @GetMapping("/new")
-    public String postNew(HttpServletRequest request) {
-        log.info("================> 게시글 추가 페이지 호출, " + request.getRequestURI());
-        return context + "/post-new";
-    }
-
     // 게시글 추가 기능 컨트롤러
     @PostMapping("/new")
     public String postSave(
@@ -112,16 +98,22 @@ public class PostController {
     }
 
     // 삭제 기능 컨트롤러
-    @PostMapping("/delete")
-    public String postDelete(@RequestParam("id") String id, HttpServletRequest request) {
+    @DeleteMapping(value = "/delete", produces = "text/plain;charset=UTF-8")
+    public ResponseEntity<String>  postDelete(@RequestParam("id") String id, HttpServletRequest request) {
         log.info("================> 게시글 삭제 기능 호출, " + request.getRequestURI());
 
         long postId = Long.parseLong(id);
         int affectedRows = postRepository.delete(postId);
 
-        if (affectedRows > 0) log.info("삭제 성공");
+        if (affectedRows > 0) {
+            return ResponseEntity.ok("삭제 성공");
 
-        return "redirect:/post/v1/show";
+        }else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("요청을 처리할 수 없습니다.");
+
+        }
+
+
     }
 
     // 에러 강제 발생
