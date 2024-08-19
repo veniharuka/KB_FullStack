@@ -20,4 +20,27 @@
             </if>
         </where>
     </select>
+
+    <select id="findById" resultType="PostDto">
+        select id, title, content
+        from posts
+        where id=#{id}
+    </select>
+
+    <update id="update">
+        update posts
+        set title   = #{title},
+            content = #{content}
+        where id = #{id}
+    </update>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        insert into posts (title, content)
+        values (#{title}, #{content})
+    </insert>
+
+    <delete id="delete">
+        delete from posts
+        where id=#{id}
+    </delete>
 </mapper>
