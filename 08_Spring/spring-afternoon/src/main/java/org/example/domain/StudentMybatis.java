@@ -3,10 +3,9 @@ package org.example.domain;
 import lombok.*;
 
 @Data
-@RequiredArgsConstructor
 @AllArgsConstructor
-@Builder
 @NoArgsConstructor
+@Builder
 public class StudentMybatis {
     private Long id;
     private String name;
