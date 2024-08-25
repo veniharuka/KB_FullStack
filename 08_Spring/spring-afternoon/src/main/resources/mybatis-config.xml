@@ -13,7 +13,7 @@
         <typeAlias alias="BookMybatis" type="org.example.domain.BookMybatis" />
         <typeAlias alias="TodoMybatis" type="org.example.domain.TodoMybatis" />
         <typeAlias alias="StudentMybatis" type="org.example.domain.StudentMybatis" />
-<!--        <typeAlias alias="StudentMapper" type="org.example.repository.student.mybatis.StudentMapper"/>-->
+        
 
     </typeAliases>
 </configuration>
