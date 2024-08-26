@@ -21,10 +21,16 @@ public class StudentRepository {
     public StudentMybatis findById(Long id){
         return studentMapper.findById(id);
     }
+    public StudentMybatis findByName(String name){
+        return studentMapper.findByName(name);
+    }
     public int save(StudentMybatis student){
         return studentMapper.save(student);
     }
-    public int update(StudentMybatis newStudent){
-        return studentMapper.update(newStudent);
+    public int delete(Long id){
+        return studentMapper.delete(id);
+    }
+    public int updateAge(StudentMybatis newStudent){
+        return studentMapper.updateAge(newStudent);
     }
 }

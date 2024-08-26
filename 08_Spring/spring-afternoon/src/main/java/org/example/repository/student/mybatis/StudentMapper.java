@@ -10,7 +10,8 @@ import java.util.List;
 public interface StudentMapper {
     public List<StudentMybatis> findAll();
     public StudentMybatis findById(@Param("id") Long id);
+    public StudentMybatis findByName(@Param("name") String name);
     public int save(StudentMybatis newStudent);
     public int delete(@Param("id") Long id);
-    public int update(StudentMybatis newStudent);
+    public int updateAge(StudentMybatis newStudent);
 }

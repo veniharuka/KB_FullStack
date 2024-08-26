@@ -6,4 +6,27 @@
     <select id="findAll" resultType="StudentMybatis">
         select * from student
     </select>
+
+    <select id="findById" resultType="StudentMybatis">
+        select * from student where id = #{id}
+    </select>
+
+    <select id="findByName" resultType="StudentMybatis">
+        select * from student where name = #{name}
+    </select>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        insert into student (name,age,gender)
+        values (#{name},#{age},#{gender})
+    </insert>
+
+    <delete id="delete">
+        delete from student where id=#{id}
+    </delete>
+    <update id="updateAge">
+        update student
+        set age = #{age}
+        where name=#{name}
+    </update>
+
 </mapper>
