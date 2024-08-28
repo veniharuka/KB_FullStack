@@ -1,4 +1,4 @@
-package org.example.security.service;
+package org.example.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.domain.User;

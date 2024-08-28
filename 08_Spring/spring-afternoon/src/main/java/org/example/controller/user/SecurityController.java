@@ -1,7 +1,7 @@
 package org.example.controller.user;
 
 import lombok.RequiredArgsConstructor;
-import org.example.security.service.CustomUserDetailService;
+import org.example.service.CustomUserDetailService;
 import org.example.service.user.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
