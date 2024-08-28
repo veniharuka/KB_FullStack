@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/security/logout")
                 .invalidateHttpSession(true)
                 .deleteCookies("remember-me","JSESSIONID")
-                .logoutSuccessUrl("/security/login-success")
+                .logoutSuccessUrl("/security/login")
                 .permitAll();
 
         http.addFilterBefore(encodingFilter(), CsrfFilter.class);
