@@ -39,7 +39,11 @@ public class BoardServiceImpl implements BoardService {
         // 아래의 코드는 JAVA 의 컴파일 에러를 막기 위한 코드입니다.
         // 조건에 맞는 코드로 코드를 수정하여 주세요.
         // 조건 : boardMapper 를 이용하여 실제로 게시글을 업데이트한 이후, 업데이트 된 게시글을 리턴하는 기능
-        Board tempBoard = new Board();
-        return tempBoard;
+//        Board tempBoard = new Board();
+//        return tempBoard;
+
+        boardMapper.update(board);
+        Board updateBoard = detail(board.getId());
+        return updateBoard;
     }
 }

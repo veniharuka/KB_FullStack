@@ -4,30 +4,30 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.example.board.domain.Board;
 import org.example.board.service.BoardService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-@Controller
+@RestController
 @Log4j
-@RequestMapping("/board")
+@RequestMapping("/rest/board")
+@CrossOrigin("*")
 @RequiredArgsConstructor
-public class BoardController {
+public class BoardRestController {
     // @RequiredArgsConstructor 에 의해 의존성이 자동으로 주입 됩니다
     private final BoardService boardService;
     private final String context = "/board";
 
     // 문제 1. 게시판 목록 기능 구현하기    
     @GetMapping("/list")
-    public String listPage(Model model) {
-        List<Board> boards = boardService.getList();
-        model.addAttribute("boardList",boards);
+    public ResponseEntity <List<Board>> listPage() {
+        List<Board> boardsList = boardService.getList();
+
         // 여기 부분에 코드를 완성하여, 게시판 목록 기능을 완성시켜 주세요
-        return context + "/list";
+        return ResponseEntity.ok(boardsList);
     }
 
     // 게시글 작성 모드 페이지로 이동하는 메서드 -> 이미 완성 된 상태
@@ -46,14 +46,14 @@ public class BoardController {
     }
 
     // 문제 3. 게시글 내용 보기 기능 구현하기
-    @GetMapping("/detail")
-    public String detailPage(@RequestParam("id") Long id,
-                             Model model) {
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Board> detailPage(@PathVariable("id") Long id
+                             ) {
         // 여기 부분에 코드를 완성하여, 게시글 내용 보기 기능을 완성시켜 주세요
         Board detailBoard = boardService.detail(id);
         boardService.detail(id);
-        model.addAttribute("board",detailBoard);
-        return context + "/detail";
+
+        return ResponseEntity.ok(detailBoard);
     }
 
     // 문제 4. 게시글 삭제 기능 구현하기
@@ -75,9 +75,8 @@ public class BoardController {
             @RequestParam("id") Long id,
             Model model
     ) {
-        Board findBoard = boardService.detail(id);
+        Board findBoard = boardService.delete(id);
         model.addAttribute("board", findBoard);
-        System.out.println(findBoard.toString());
         // 여기 부분에 코드를 완성하여, 게시글 수정 페이지 이동 기능을 완성시켜 주세요
         return context + "/update";
     }

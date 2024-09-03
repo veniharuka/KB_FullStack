@@ -93,19 +93,21 @@
     <%-- 문제 5-1. 게시글 수정 기능 구현하기   --%>
     <%-- 게시글 ID 값 전달 필요 --%>
     <label for="title">ID</label>
-    <input type="text" name="id" disabled/>
+    <input type="text" name="id" value="${board.id}" readonly/>
 
     <%-- 게시글 작성자 전달 필요 --%>
     <label for="title">작성자</label>
-    <input type="text" name="author" disabled/>
+    <input type="text" name="author" value="${board.author}" readonly/>
 
     <label for="title">제목</label>
     <%-- 게시글 제목 전달 필요 --%>
-    <input type="text" id="title" name="title" required>
+    <input type="text" id="title" name="title" value="${board.title}" required>
 
     <label for="content">내용</label>
     <%-- 게시글 내용 전달 필요 --%>
-    <textarea id="content" name="content" required></textarea>
+    <textarea id="content" name="content" required>
+        ${board.content}
+    </textarea>
 
     <input type="submit" value="수정" class="submit-button">
     <a href="/board/list" class="back-button">목록으로 돌아가기</a>

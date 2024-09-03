@@ -74,12 +74,12 @@
 <body>
 <%@include file="../header.jsp" %>
 <div class="post-container">
-    <h1 class="post-title"> <!-- 제목 넣기 --> </h1>
+    <h1 class="post-title"> ${board.title} </h1>
     <div class="post-content">
-        <div>작성자: <!-- 작성자 넣기 --></div>
-        <div>작성일: <!-- 작성일 넣기 --></div>
+        <div>작성자: ${board.author}</div>
+        <div>작성일: ${board.regDate}</div>
         <div>
-            <!-- 게시글 내용 넣기 -->
+            ${board.content}
         </div>
     </div>
     <div class="button-container">
