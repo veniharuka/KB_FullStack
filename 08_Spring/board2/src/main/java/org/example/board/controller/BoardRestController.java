@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -21,13 +23,13 @@ public class BoardRestController {
     private final BoardService boardService;
     private final String context = "/board";
 
-    // 문제 1. 게시판 목록 기능 구현하기    
+    // 문제 1. 게시판 목록 기능 구현하기
     @GetMapping("/list")
-    public ResponseEntity <List<Board>> listPage() {
-        List<Board> boardsList = boardService.getList();
+    public ResponseEntity<List<Board>>listPage() {
+        List<Board> findList = boardService.getList();
 
         // 여기 부분에 코드를 완성하여, 게시판 목록 기능을 완성시켜 주세요
-        return ResponseEntity.ok(boardsList);
+        return ResponseEntity.ok(findList);
     }
 
     // 게시글 작성 모드 페이지로 이동하는 메서드 -> 이미 완성 된 상태
@@ -38,54 +40,49 @@ public class BoardRestController {
 
     // 문제 2. 게시글 작성 기능 구현하기
     @PostMapping("/create")
-    public String create(@ModelAttribute Board board) {
+    public String create(Board board,Model model) {
         // 여기 부분에 코드를 완성하여, 게시글 작성 기능을 완성시켜 주세요
+        Board newBoard = boardService.create(board);
+        model.addAttribute("board",newBoard);
 
-        boardService.create(board);
         return "redirect:/board/list";
     }
 
     // 문제 3. 게시글 내용 보기 기능 구현하기
     @GetMapping("/detail/{id}")
-    public ResponseEntity<Board> detailPage(@PathVariable("id") Long id
+    public ResponseEntity<Board>  detailPage(@PathVariable("id")Long id
                              ) {
         // 여기 부분에 코드를 완성하여, 게시글 내용 보기 기능을 완성시켜 주세요
         Board detailBoard = boardService.detail(id);
-        boardService.detail(id);
 
-        return ResponseEntity.ok(detailBoard);
+        return ResponseEntity.ok(detailBoard) ;
     }
 
     // 문제 4. 게시글 삭제 기능 구현하기
     @PostMapping("/delete/{id}")
-    public String delete(@PathVariable("id") Long id, Model model) {
+    public String delete(@PathVariable("id") Long id) {
 
         // 여기 부분에 코드를 완성하여, 게시글 삭제 기능을 완성시켜 주세요
         Board deleteBoard = boardService.delete(id);
-        List<Board> boards = boardService.getList();
-        model.addAttribute("boardList",boards);
-
 
         return "redirect:/board/list";
     }
 
     // 문제 5-1. 게시글 수정 기능 구현하기
     @GetMapping("/update")
-    public String updatePage(
-            @RequestParam("id") Long id,
-            Model model
-    ) {
-        Board findBoard = boardService.delete(id);
-        model.addAttribute("board", findBoard);
+    public String updatePage(@RequestParam("id") Long id, Model model) {
+        Board detailBoard = boardService.detail(id);
+        model.addAttribute("board",detailBoard);
         // 여기 부분에 코드를 완성하여, 게시글 수정 페이지 이동 기능을 완성시켜 주세요
         return context + "/update";
     }
 
     // 문제 5-2. 게시글 수정 기능 구현하기
     @PostMapping("/update")
-    public String update(@ModelAttribute Board board) {
+    public String update( Board board) {
         // 여기 부분에 코드를 완성하여, 게시글 수정 기능을 완성시켜 주세요
         boardService.update(board);
+
         return "redirect:/board/list";
     }
 }

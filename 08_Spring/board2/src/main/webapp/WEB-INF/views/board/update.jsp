@@ -97,11 +97,11 @@
 
     <%-- 게시글 작성자 전달 필요 --%>
     <label for="title">작성자</label>
-    <input type="text" name="author" value="${board.author}" readonly/>
+    <input type="text" name="author"  value="${board.author}" readonly/>
 
     <label for="title">제목</label>
     <%-- 게시글 제목 전달 필요 --%>
-    <input type="text" id="title" name="title" value="${board.title}" required>
+    <input type="text" id="title" name="title" value="${board.title}"  required>
 
     <label for="content">내용</label>
     <%-- 게시글 내용 전달 필요 --%>

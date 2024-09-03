@@ -74,9 +74,9 @@
 <body>
 <%@include file="../header.jsp" %>
 <div class="post-container">
-    <h1 class="post-title"> ${board.title} </h1>
+    <h1 class="post-title">  </h1>
     <div class="post-content">
-        <div>작성자: ${board.author}</div>
+        <div>작성자: ${board.author} </div>
         <div>작성일: ${board.regDate}</div>
         <div>
             ${board.content}
