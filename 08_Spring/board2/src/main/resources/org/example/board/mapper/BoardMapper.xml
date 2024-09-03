@@ -10,10 +10,8 @@
     </select>
 
     <insert id="create">
-        insert into boards (title,content,author)
-        values (#{title},
-              #{content},
-              #{author})
+        insert into boards (title, content, author)
+        values (${title},${content},${author})
     -- 문제 2. 게시글 작성 기능 구현하기 : 적절한 SQL 구문을 작성해 주세요
     </insert>
 
@@ -29,10 +27,10 @@
 
     <update id="update">
     -- 문제 5. 게시글 수정 기능 구현하기
-        update board set
-            title = #{title},
-            content = #{content},
-            author = #{author}
-        where id=#{id}
+       update boards set
+            title = ${title},
+            content = ${content},
+            author = ${author}
+       where id =${id}
     </update>
 </mapper>

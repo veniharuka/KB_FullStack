@@ -24,9 +24,9 @@ public class BoardController {
     // 문제 1. 게시판 목록 기능 구현하기    
     @GetMapping("/list")
     public String listPage(Model model) {
-
         List<Board> findList = boardService.getList();
-        model.addAttribute(findList);
+        model.addAttribute("boards", findList);
+
         // 여기 부분에 코드를 완성하여, 게시판 목록 기능을 완성시켜 주세요
         return context + "/list";
     }
@@ -39,21 +39,20 @@ public class BoardController {
 
     // 문제 2. 게시글 작성 기능 구현하기
     @PostMapping("/create")
-    public String create(Board board,Model model) {
+    public String create(Board board, Model model) {
         // 여기 부분에 코드를 완성하여, 게시글 작성 기능을 완성시켜 주세요
-    Board newBoard = boardService.create(board);
-    model.addAttribute("board",newBoard);
 
+        Board newBoard = boardService.create(board);
+        model.addAttribute("board", newBoard);
         return "redirect:/board/list";
     }
 
     // 문제 3. 게시글 내용 보기 기능 구현하기
     @GetMapping("/detail")
-    public String detailPage(@RequestParam("id")Long id,
-                             Model model) {
+    public String detailPage(Long id, Model model) {
         // 여기 부분에 코드를 완성하여, 게시글 내용 보기 기능을 완성시켜 주세요
         Board detailBoard = boardService.detail(id);
-        model.addAttribute(detailBoard);
+        model.addAttribute("board", detailBoard);
         return context + "/detail";
     }
 
@@ -62,26 +61,25 @@ public class BoardController {
     public String delete(@PathVariable("id") Long id) {
 
         // 여기 부분에 코드를 완성하여, 게시글 삭제 기능을 완성시켜 주세요
-        Board deleteBoard = boardService.delete(id);
+        boardService.delete(id);
 
         return "redirect:/board/list";
     }
 
     // 문제 5-1. 게시글 수정 기능 구현하기
     @GetMapping("/update")
-    public String updatePage(@RequestParam("id") Long id, Model model) {
-        Board detailBoard = boardService.detail(id);
-        model.addAttribute("board",detailBoard);
+    public String updatePage() {
+
         // 여기 부분에 코드를 완성하여, 게시글 수정 페이지 이동 기능을 완성시켜 주세요
         return context + "/update";
     }
 
     // 문제 5-2. 게시글 수정 기능 구현하기
     @PostMapping("/update")
-    public String update( Board board) {
+    public String update( Board board, Model model) {
         // 여기 부분에 코드를 완성하여, 게시글 수정 기능을 완성시켜 주세요
-         boardService.update(board);
 
+        boardService.update(board);
         return "redirect:/board/list";
     }
 }
