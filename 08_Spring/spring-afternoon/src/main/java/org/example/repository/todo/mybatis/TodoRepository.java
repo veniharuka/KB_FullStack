@@ -35,4 +35,7 @@ public class TodoRepository {
     public int updateContent(TodoMybatis newTodo){
         return todoMapper.updateContent(newTodo);
     }
+    public int updateAge(TodoMybatis newTodo){
+        return todoMapper.updateContent(newTodo);
+    }
 }

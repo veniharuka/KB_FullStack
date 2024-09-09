@@ -32,4 +32,10 @@
         where id=#{id}
     </update>
 
+    <update id="updateAge">
+        update todo
+        set todo = #{todo}
+        where id=#{id}
+    </update>
+
 </mapper>
